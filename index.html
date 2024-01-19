@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Protflio</title>
+    <link rel="icon" href="/resources/logo (2).jpg"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+    <link rel="stylesheet" href="/resources/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <span id="top-button" class="text-danger"><i class="fa-solid fa-circle-up fa-2x"></i></span>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container"> 
+            <nav>
+
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="tiwaryanant81@gmil.com">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="7643049562">Contact</a></li>
+                </ul>
+                <img src="/resources/New-file.gif" class="logo">
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>FRONT END DEVELOPER</p> 
+            <h1>Hi, I'm <span>Anant Tiwary!</span></h1>
+            <div class="col-sm">
+            <p>&copy; Rights Reserved.</p>
+            <div class="col-sm">
+                <a class="text-light mx-2" href="https://www.instagram.com/anant_tiwary12/">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a class="text-light mx-2" href="https://www.facebook.com/Anant Tiwary/">
+                    <i class="fa-brands fa-facebook"></i></a>
+                    <a class="text-light mx-2" href="https://github.com/annattiwary12">
+                        <i class="fa-brands fa-github-alt"></i></a>
+                        <a class="text-light mx-2" href="https://www.linkedin.com/in/anant-tiwary-59a27122a/">
+                            <i class="fa-brands fa-linkedin-alt"></i></a>
+                        <a href="/resources/my-cv.pdf" target="_blank">
+                            <button>View Resume</button>
+                        </a>
+                        
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- End of header -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    
+                    <img src="/resources/background.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is <b>Anant Tiwary</b>, and my portfolio is a representation of all<br> that I've learned and accomplished as a science and engineering student.</p>
+
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p> 
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend:</span> Html,css,javaScript</li> 
+                            <li><span>Languages:</span> C,java,python.</li>
+                            <li><span>Fameworks:</span> Bootstrap.</li>
+                        </ul>
+                    </div>
+                   
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10th :68%</li>
+                            <li><span>2020-2023</span><br>Galgotias University, polytechnic:8.9</li>
+                            <li><span>2023-2026*</span><br> kalinga University: (Le)Enginnering (Cse)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span id="top-button" class="text-danger"><i class="fa-solid fa-circle-up fa-2x"></i></span>
+
+    </div>
+
+    <script>
+        var tablinks = document.querySelectorAll(".tab-links"); 
+        var tabcontents = document.querySelectorAll(".tab-contents"); 
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        AOS.init();
+
+//top-button
+$("#top-button").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 1000);
+});
+
+    </script>
+</body>
+</html>
